@@ -28,6 +28,14 @@ export default function Navbar() {
         </ul>
 
       </div>
+<button
+  onClick={() =>
+    document.documentElement.classList.toggle("dark")
+  }
+>
+  🌙
+</button>
+
     </nav>
   );
 }

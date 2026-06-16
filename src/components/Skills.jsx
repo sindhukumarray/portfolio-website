@@ -34,7 +34,9 @@ export default function Skills() {
             <div
               key={skill}
               className="
-              bg-blue-600
+              bg-gradient-to-r
+from-blue-600
+to-indigo-600
               text-white
               px-5
               py-3
