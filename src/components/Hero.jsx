@@ -20,19 +20,37 @@ export default function Hero() {
         MCA Student | MERN Stack Developer | Frontend Enthusiast
       </p>
 
-      <button
-        className="
-        mt-6
-        bg-blue-600
-        text-white
-        px-6
-        py-3
-        rounded-lg
-        hover:bg-blue-700
-        "
-      >
-        View Projects
-      </button>
+      <div className="flex gap-4 mt-6">
+
+  <a
+    href="#projects"
+    className="
+    bg-blue-600
+    text-white
+    px-6
+    py-3
+    rounded-lg
+    hover:bg-blue-700
+    "
+  >
+    View Projects
+  </a>
+
+  <a
+    href="/resume.pdf"
+    className="
+    border
+    border-blue-600
+    text-blue-600
+    px-6
+    py-3
+    rounded-lg
+    "
+  >
+    Download Resume
+  </a>
+
+</div>
     </section>
   );
 }
