@@ -9,7 +9,8 @@ export default function Navbar() {
 
         <ul className="hidden md:flex gap-6 font-medium">
           <li>
-            <a href="#about" className="hover:text-blue-500">
+            <a href="#about"className="hover:text-blue-600 transition"
+               >
               About
             </a>
           </li>
