@@ -54,6 +54,20 @@ Sindhu Portfolio </h1>
         </a>
       </li>
 
+       <li>
+        <a
+          href="#Skills"
+          className="
+          hover:text-blue-600
+          transition
+          duration-300
+          "
+        >
+          Skills
+        </a>
+      </li>
+
+
       <li>
         <a
           href="#projects"
@@ -64,6 +78,19 @@ Sindhu Portfolio </h1>
           "
         >
           Projects
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="#Experience"
+          className="
+          hover:text-blue-600
+          transition
+          duration-300
+          "
+        >
+          Experience
         </a>
       </li>
 

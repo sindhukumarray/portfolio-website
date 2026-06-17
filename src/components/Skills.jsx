@@ -3,6 +3,7 @@ import { skills } from "../data/skills";
 export default function Skills() {
   return (
     <section
+    id="Skills"
       className="
       py-20
       px-6
