@@ -1,63 +1,99 @@
 import { skills } from "../data/skills";
 
 export default function Skills() {
-return ( <section
-   className="
-   py-20
-   px-6
-   bg-slate-100
-   dark:bg-slate-950
-   text-black
-   dark:text-white
-   "
- > <div className="max-w-5xl mx-auto">
-
-    <h2
+  return (
+    <section
       className="
-      text-4xl
-      font-bold
-      text-center
-      mb-10
-      text-gray-800
+      py-20
+      px-6
+      bg-slate-100
+      dark:bg-slate-950
+      text-black
       dark:text-white
       "
     >
-      My Skills
-    </h2>
+      <div className="max-w-6xl mx-auto">
 
-    <div
-      className="
-      flex
-      flex-wrap
-      justify-center
-      gap-4
-      "
-    >
-      {skills.map((skill) => (
-        <div
-          key={skill}
+        <h2
           className="
-          bg-gradient-to-r
-          from-blue-600
-          to-indigo-600
-          text-white
-          px-5
-          py-3
-          rounded-lg
-          shadow-md
-          hover:shadow-xl
-          hover:-translate-y-1
-          transition-all
-          duration-300
-          cursor-pointer
+          text-4xl
+          font-bold
+          text-center
+          mb-12
           "
         >
-          {skill}
-        </div>
-      ))}
-    </div>
+          My Skills
+        </h2>
 
-  </div>
-</section>
-);
+        <div
+          className="
+          grid
+          md:grid-cols-2
+          lg:grid-cols-3
+          gap-8
+          "
+        >
+          {skills.map((category) => (
+            <div
+              key={category.category}
+              className="
+              bg-white
+              dark:bg-slate-800
+              p-6
+              rounded-xl
+              shadow-lg
+              "
+            >
+              <h3
+                className="
+                text-2xl
+                font-bold
+                text-blue-600
+                mb-6
+                "
+              >
+                {category.category}
+              </h3>
+
+              {category.items.map((skill) => (
+                <div
+                  key={skill.name}
+                  className="mb-5"
+                >
+                  <div className="flex justify-between mb-2">
+                    <span>{skill.name}</span>
+                    <span>{skill.level}%</span>
+                  </div>
+
+                  <div
+                    className="
+                    w-full
+                    bg-gray-200
+                    dark:bg-slate-700
+                    rounded-full
+                    h-3
+                    "
+                  >
+                    <div
+                      className="
+                      bg-gradient-to-r
+                      from-blue-500
+                      to-indigo-600
+                      h-3
+                      rounded-full
+                      "
+                      style={{
+                        width: `${skill.level}%`,
+                      }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
 }
