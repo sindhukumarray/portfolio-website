@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       className="
-      min-h-screen
+      min-h-[90vh]
       flex
       items-center
       justify-center
