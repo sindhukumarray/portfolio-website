@@ -7,16 +7,20 @@ return ( <section
    py-20
    px-6
    bg-slate-50
+   dark:bg-slate-950
+   text-black
+   dark:text-white
    "
  > <div className="max-w-6xl mx-auto">
 
-```
     <h2
       className="
       text-4xl
       font-bold
       text-center
       mb-12
+      text-gray-800
+      dark:text-white
       "
     >
       My Projects
@@ -36,6 +40,7 @@ return ( <section
           key={project.id}
           className="
           bg-white
+          dark:bg-slate-800
           rounded-xl
           shadow-md
           overflow-hidden
@@ -71,6 +76,7 @@ return ( <section
             <p
               className="
               text-gray-600
+              dark:text-gray-300
               mb-5
               "
             >
@@ -104,10 +110,12 @@ return ( <section
                 border
                 border-blue-600
                 text-blue-600
+                dark:text-blue-400
                 px-4
                 py-2
                 rounded-lg
                 hover:bg-blue-50
+                dark:hover:bg-slate-700
                 transition
                 "
               >
