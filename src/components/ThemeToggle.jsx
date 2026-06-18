@@ -19,7 +19,7 @@ export default function ThemeToggle() {
       rounded-lg
       "
     >
-      {dark ? "☀ Light" : "🌙 Dark"}
+      {dark ? "☀ " : "🌙"}
     </button>
   );
 }

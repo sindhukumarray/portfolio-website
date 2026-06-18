@@ -48,7 +48,7 @@ export default function About() {
 
             I enjoy building responsive web applications
             using React, Tailwind CSS, JavaScript,
-            Node.js and MySQL.
+            and MySQL.
 
             My goal is to become a professional Full
             Stack Developer and contribute to real-world

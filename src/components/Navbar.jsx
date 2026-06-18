@@ -30,6 +30,7 @@ export default function Navbar() {
         py-4
         "
       >
+        {/* Logo */}
         <h1
           className="
           text-2xl
@@ -41,7 +42,6 @@ export default function Navbar() {
         </h1>
 
         {/* Desktop Menu */}
-
         <ul
           className="
           hidden
@@ -86,18 +86,22 @@ export default function Navbar() {
           </li>
         </ul>
 
-        {/* Mobile Menu Button */}
+        {/* Right Side */}
+        <div className="md:hidden flex items-center gap-4">
+          {/* Theme Toggle */}
+          <ThemeToggle />
 
-        <button
-          className="md:hidden text-2xl"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <FaTimes /> : <FaBars />}
-        </button>
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden text-2xl"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? <FaTimes /> : <FaBars />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
-
       {menuOpen && (
         <div
           className="
@@ -109,6 +113,7 @@ export default function Navbar() {
           py-6
           bg-white
           dark:bg-slate-950
+          shadow-md
           "
         >
           <a href="#about" onClick={() => setMenuOpen(false)}>
@@ -130,8 +135,6 @@ export default function Navbar() {
           <a href="#contact" onClick={() => setMenuOpen(false)}>
             Contact
           </a>
-
-          <ThemeToggle />
         </div>
       )}
     </nav>
