@@ -177,7 +177,7 @@ export default function Hero() {
 
         {/* Buttons */}
 
-        <div className="flex flex-wrap justify-center gap-25  mt-4">
+        <div className="flex flex-wrap justify-center gap-25  mt-8">
           <a
             href="#projects"
             className="
