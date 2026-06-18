@@ -1,117 +1,139 @@
+import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
-return ( <nav
-   className="
-   fixed
-   top-0
-   w-full
-   bg-white
-   dark:bg-slate-950
-   text-black
-   dark:text-white
-   shadow-md
-   z-50
-   "
- > <div
-     className="
-     max-w-7xl
-     mx-auto
-     flex
-     items-center
-     justify-between
-     px-6
-     py-4
-     "
-   > <h1
-       className="
-       text-2xl
-       font-bold
-       text-blue-600
-       "
-     >
-Sindhu Portfolio </h1>
+  const [menuOpen, setMenuOpen] = useState(false);
 
-    <ul
+  return (
+    <nav
       className="
-      hidden
-      md:flex
-      items-center
-      gap-6
-      font-medium
+      fixed
+      top-0
+      w-full
+      bg-white
+      dark:bg-slate-950
+      text-black
+      dark:text-white
+      shadow-md
+      z-50
       "
     >
-      <li>
-        <a
-          href="#about"
+      <div
+        className="
+        max-w-7xl
+        mx-auto
+        flex
+        items-center
+        justify-between
+        px-6
+        py-4
+        "
+      >
+        <h1
           className="
-          hover:text-blue-600
-          transition
-          duration-300
+          text-2xl
+          font-bold
+          text-blue-600
           "
         >
-          About
-        </a>
-      </li>
+          Sindhu Portfolio
+        </h1>
 
-       <li>
-        <a
-          href="#Skills"
+        {/* Desktop Menu */}
+
+        <ul
           className="
-          hover:text-blue-600
-          transition
-          duration-300
+          hidden
+          md:flex
+          items-center
+          gap-6
+          font-medium
           "
         >
-          Skills
-        </a>
-      </li>
+          <li>
+            <a href="#about" className="hover:text-blue-600 transition">
+              About
+            </a>
+          </li>
 
+          <li>
+            <a href="#Skills" className="hover:text-blue-600 transition">
+              Skills
+            </a>
+          </li>
 
-      <li>
-        <a
-          href="#projects"
+          <li>
+            <a href="#projects" className="hover:text-blue-600 transition">
+              Projects
+            </a>
+          </li>
+
+          <li>
+            <a href="#Experience" className="hover:text-blue-600 transition">
+              Experience
+            </a>
+          </li>
+
+          <li>
+            <a href="#contact" className="hover:text-blue-600 transition">
+              Contact
+            </a>
+          </li>
+
+          <li>
+            <ThemeToggle />
+          </li>
+        </ul>
+
+        {/* Mobile Menu Button */}
+
+        <button
+          className="md:hidden text-2xl"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+
+      {menuOpen && (
+        <div
           className="
-          hover:text-blue-600
-          transition
-          duration-300
+          md:hidden
+          flex
+          flex-col
+          gap-5
+          px-6
+          py-6
+          bg-white
+          dark:bg-slate-950
           "
         >
-          Projects
-        </a>
-      </li>
+          <a href="#about" onClick={() => setMenuOpen(false)}>
+            About
+          </a>
 
-      <li>
-        <a
-          href="#Experience"
-          className="
-          hover:text-blue-600
-          transition
-          duration-300
-          "
-        >
-          Experience
-        </a>
-      </li>
+          <a href="#Skills" onClick={() => setMenuOpen(false)}>
+            Skills
+          </a>
 
-      <li>
-        <a
-          href="#contact"
-          className="
-          hover:text-blue-600
-          transition
-          duration-300
-          "
-        >
-          Contact
-        </a>
-      </li>
+          <a href="#projects" onClick={() => setMenuOpen(false)}>
+            Projects
+          </a>
 
-      <li>
-        <ThemeToggle />
-      </li>
-    </ul>
-  </div>
-</nav>
-);
+          <a href="#Experience" onClick={() => setMenuOpen(false)}>
+            Experience
+          </a>
+
+          <a href="#contact" onClick={() => setMenuOpen(false)}>
+            Contact
+          </a>
+
+          <ThemeToggle />
+        </div>
+      )}
+    </nav>
+  );
 }
