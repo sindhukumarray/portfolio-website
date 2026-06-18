@@ -1,11 +1,11 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import profileImg from "../assets/profile.jpg";
-
+import { TypeAnimation } from "react-type-animation";
 export default function Hero() {
   return (
     <section
       className="
-      min-h-[90vh]
+      min-h-[85vh]
       flex
       items-center
       justify-center
@@ -78,16 +78,32 @@ export default function Hero() {
 
         {/* Role */}
 
-        <p
-          className="
-          text-lg
-          md:text-2xl
-          text-gray-600
-          dark:text-gray-300
-          "
-        >
-          MCA Student | MERN Stack Developer
-        </p>
+       <p className="text-lg text-gray-500 dark:text-gray-400 mb-2">
+  MCA Student
+</p>
+
+<TypeAnimation
+  sequence={[
+    "MERN Stack Developer",
+    2000,
+    "React Developer",
+    2000,
+    "Frontend Developer",
+    2000,
+    "JavaScript Developer",
+    2000,
+  ]}
+  wrapper="span"
+  speed={50}
+  repeat={Infinity}
+  className="
+  text-2xl
+  md:text-3xl
+  font-semibold
+  text-blue-600
+  dark:text-cyan-400
+  "
+/>
 
         {/* Description */}
 
