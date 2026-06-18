@@ -42,13 +42,6 @@ export default function Footer() {
             <FaLinkedin />
           </a>
 
-          <a
-            href="mailto:sindhukumarray007@gmail.com"
-            className="hover:text-blue-500 transition"
-          >
-            <FaEnvelope />
-          </a>
-
         </div>
 
         <p className="text-center text-gray-500 dark:text-gray-400 text-xs mt-3">
